@@ -39,9 +39,9 @@ export default function LoginPage() {
             <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
             <div className="absolute bottom-0 -right-4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
 
-            <div className="relative p-8 bg-white rounded-3xl shadow-2xl w-full max-w-md max-h-[600px] overflow-auto border border-slate-100 mx-4">
-                <div className="flex flex-col items-center mb-10">
-                    <div className="w-20 h-20 relative bg-slate-50 rounded-2xl p-4 mb-4 shadow-sm border border-slate-100">
+            <div className="relative p-8 bg-white rounded-3xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-auto border border-slate-100 mx-4">
+                <div className="flex items-center gap-4 mb-10">
+                    <div className="w-20 h-20 shrink-0 relative bg-slate-50 rounded-2xl p-4 shadow-sm border border-slate-100">
                         <Image
                             src="/logo-blue.png"
                             alt="TAFES Logo"
@@ -49,8 +49,10 @@ export default function LoginPage() {
                             className="object-contain p-2"
                         />
                     </div>
-                    <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Admin Portal</h1>
-                    <p className="text-slate-500 mt-2 font-medium">Family Management System</p>
+                    <div className="flex flex-col items-center flex-1">
+                        <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Admin Portal</h1>
+                        <p className="text-slate-500 mt-2 font-medium">Family Management System</p>
+                    </div>
                 </div>
 
                 {error && (
