@@ -61,6 +61,23 @@ export default function Navbar() {
                                 );
                             })}
                         </div>
+
+                        {/* Mobile/compact icons (replicate wefam style) */}
+                        <div className="sm:hidden flex items-center gap-2">
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        className={`p-2 rounded-lg transition-all ${isActive ? 'bg-blue-600 text-white' : 'text-slate-400'
+                                            }`}
+                                    >
+                                        <link.icon size={18} />
+                                    </Link>
+                                );
+                            })}
+                        </div>
                     </div>
 
                     <div className="flex items-center">

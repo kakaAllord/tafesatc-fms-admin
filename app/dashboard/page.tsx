@@ -59,26 +59,26 @@ export default function Dashboard() {
             <Navbar />
             <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
                 <main>
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10">
                         <div>
                             <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Family Directory</h1>
                             <p className="text-slate-500 mt-1 font-medium italic opacity-80">Manage your christian union member families</p>
                         </div>
 
-                        <div className="flex items-center gap-4">
-                            <div className="relative">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">
+                            <div className="relative w-full sm:w-64">
                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
                                 <input
                                     type="text"
                                     placeholder="Search families..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 w-64 shadow-sm"
+                                    className="pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 w-full shadow-sm"
                                 />
                             </div>
-                            <Link href="/family/create" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-6 rounded-xl shadow-lg shadow-blue-500/20 transition-all active:scale-95">
+                            <Link href="/family/create" className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-6 rounded-xl shadow-lg shadow-blue-500/20 transition-all active:scale-95 whitespace-nowrap">
                                 <PlusCircle size={20} />
-                                <span>New Family</span>
+                                <span className="hidden sm:inline">New Family</span>
                             </Link>
                         </div>
                     </div>
